@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title>Azure App</title> 
+  </head> 
+  <body> 
+    <h1>🚀 My Azure App is Live!</h1> 
+    <button onclick="callAPI()">Call API</button> 
+    <p id="result"></p> 
+    <script> async function callAPI() { 
+  const res = await fetch("/api"); 
+  const data = await res.json(); 
+  document.getElementById("result").innerText = data.message; 
+} 
+    </script> 
+  </body> 
+</html> 
